@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="3dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:layout_constraintBottom_toBottomOf="@+id/nameView"
+        card_view:layout_constraintTop_toBottomOf="@+id/nameView">
+
+        <TextView
+            android:id="@+id/lightNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="TextView"
+            card_view:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="16dp"
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="5dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/lightSeekBar" />
+
+        <Switch
+            android:id="@+id/lightToggleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="318dp"
+            tools:layout_editor_absoluteY="22dp"
+            card_view:layout_constraintStart_toEndOf="@+id/lightSeekBar"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent" />
+
+        <SeekBar
+            android:id="@+id/lightSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="254"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="40dp"
+            card_view:layout_constraintTop_toBottomOf="@+id/lightNameView"
+            card_view:layout_constraintEnd_toStartOf="@+id/lightToggleSwitch"
+            android:layout_marginBottom="15dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="39dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="12dp"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

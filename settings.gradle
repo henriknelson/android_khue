@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':kHue'
+project(':kHue').projectDir = new File('kHue-library')

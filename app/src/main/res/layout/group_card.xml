@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="3dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:layout_constraintBottom_toBottomOf="@+id/nameView"
+        card_view:layout_constraintTop_toBottomOf="@+id/nameView">
+
+        <TextView
+            android:id="@+id/groupNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="22dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/groupSeekBar" />
+
+        <Switch
+            android:id="@+id/groupToggleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="318dp"
+            tools:layout_editor_absoluteY="22dp" />
+
+        <Button
+            android:id="@+id/openGroupBtn"
+            android:layout_width="43dp"
+            android:layout_height="49dp"
+            android:text="O"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="14dp"
+            android:layout_marginTop="7dp"
+            card_view:layout_constraintEnd_toStartOf="@+id/groupSeekBar"
+            android:layout_marginBottom="7dp"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp" />
+
+        <SeekBar
+            android:id="@+id/groupSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="49dp"
+            card_view:layout_constraintTop_toBottomOf="@+id/groupNameView"
+            card_view:layout_constraintStart_toEndOf="@+id/openGroupBtn"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="5dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="66dp"
+            android:max="254"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
